@@ -223,10 +223,6 @@ do
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
 	local function module_script()
-			local http = game:GetService("HttpService")
-
-		    local url = "https://pastebin.com/raw/xr1UzENB"
-			local response = game:HttpGet(url)
 			
 		local Settings = {
 			
@@ -312,6 +308,7 @@ local function UKIT_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.Ma
 	oldText=""
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(tostring(oi.GetKeyLink))
+                script.Parent.Text = "Copiado"
 	end)
 end
 local function JHXLF_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
