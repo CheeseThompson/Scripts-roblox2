@@ -1,7 +1,3 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
-
--- Instances:
-
 local Converted = {
 	["_KeySystem_Cheese"] = Instance.new("ScreenGui");
 	["_MainFrame"] = Instance.new("Frame");
@@ -222,12 +218,25 @@ Converted["_UICorner2"].Parent = Converted["_getkey"]
 
 local fake_module_scripts = {}
 
-do -- Fake Module: StarterGui.KeySystem_Cheese.Settings
+do
     local script = Instance.new("ModuleScript")
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
-    local function module_script()
+	local function module_script()
+			local http = game:GetService("HttpService")
+
+		    local url = "https://pastebin.com/raw/xr1UzENB"
+			local response = http:GetAsync(url)
+			
 		local Settings = {
+			
+			
+			
+			-- CONFIGURAÇÕES | NÃO ALTERE FORA DESTE PARÂMETRO
+			
+			
+			
+			
 			TitleText = "Script Do <b>Cheese</b>",-- O título do script
 			DescriptionText = "milhô escript do planeta terra", -- O texto embaixo do script
 			UIGradientEnabled = true, -- Se o efeito azulado aparece
@@ -237,7 +246,15 @@ do -- Fake Module: StarterGui.KeySystem_Cheese.Settings
 			GoofyBackgroundID = 10527571475, -- ID do plano de fundo
 			GetKeyLink = "https://google.com",
 			
-			Key = "CHAVE1"  -- Sua chave
+			Key = response -- Sua chave
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 		
 		return Settings
@@ -246,9 +263,9 @@ do -- Fake Module: StarterGui.KeySystem_Cheese.Settings
     fake_module_scripts[script] = module_script
 end
 
--- Fake Local Scripts:
 
-local function VDDD_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
+
+local function VNKLIA_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -278,7 +295,7 @@ local function VDDD_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.Ma
 		end
 	end)
 end
-local function SDYZSQX_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+local function UKIT_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_getkey"]
@@ -297,7 +314,7 @@ local function SDYZSQX_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese
 		setclipboard(tostring(oi.GetKeyLink))
 	end)
 end
-local function OCCIXK_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+local function JHXLF_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
     local script = Instance.new("LocalScript")
     script.Name = "LoaderManager"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -386,7 +403,7 @@ local function OCCIXK_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	end
 	function ShowTextBox()
 		Title:TweenPosition(UDim2.new(0.243, 0,0.069, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
-		PI:TweenPosition(UDim2.new(0.243, 0,0.833, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+		PI:TweenPosition(UDim2.new(0.238, 0,0.164, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
 		--TweenService:Create(PI, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 		script.Parent.MainFrame.TextBox.PlaceholderText="Input Key"
 		script.Parent.MainFrame.TextBox:TweenSize(UDim2.new(0, 200,0, 38), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
@@ -415,10 +432,15 @@ local function OCCIXK_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 		TweenService:Create(MainFrame, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
 		TweenService:Create(script.Parent.MainFrame.TextButton, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
 		TweenService:Create(script.Parent.MainFrame.TextButton, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.getkey, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.getkey, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+	
 		TweenService:Create(script.Parent.MainFrame.TextBox, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
 		TweenService:Create(script.Parent.MainFrame.TextBox, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
 		wait(1)
 		script.Parent.MainFrame.TextButton.Visible = false
+		script.Parent.MainFrame.getkey.Visible = false
+	
 		load("https://raw.githubusercontent.com/rphzz/Nebula/main/NebulaMain.lua")
 		script.Parent:Destroy()
 		loaded = false
@@ -473,6 +495,6 @@ local function OCCIXK_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	end)
 end
 
-coroutine.wrap(VDDD_fake_script)()
-coroutine.wrap(SDYZSQX_fake_script)()
-coroutine.wrap(OCCIXK_fake_script)()
+coroutine.wrap(VNKLIA_fake_script)()
+coroutine.wrap(UKIT_fake_script)()
+coroutine.wrap(JHXLF_fake_script)()
