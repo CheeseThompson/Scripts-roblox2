@@ -226,7 +226,7 @@ do
 			local http = game:GetService("HttpService")
 
 		    local url = "https://pastebin.com/raw/xr1UzENB"
-			local response = http:GetAsync(url)
+			local response = game:HttpGet(url)
 			
 		local Settings = {
 			
