@@ -215,28 +215,32 @@ Converted["_UICorner2"].CornerRadius = UDim.new(0, 7)
 Converted["_UICorner2"].Parent = Converted["_getkey"]
 
 
-
-
-
-
-
-
-
-
--- CONFIGURAÇÕES
-
-
-
-
-
 local fake_module_scripts = {}
 
 do
+	
     local script = Instance.new("ModuleScript")
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
     local function module_script()
 		local Settings = {
+			
+			
+
+
+
+
+
+
+
+
+
+
+            -- CONFIGURAÇÕES - NÃO ALTERE NADA FORA DESTE PARÂMETRO
+
+
+
+
 			TitleText = "Script Do <b>Cheese</b>",-- O título do script
 			DescriptionText = "milhô escript do planeta terra", -- O texto embaixo do script
 			UIGradientEnabled = true, -- Se o efeito azulado aparece
@@ -247,6 +251,23 @@ do
 			GetKeyLink = "https://google.com",
 			
 			Key = "CHAVE1"  -- Sua chave
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		}
 		
 		return Settings
@@ -255,27 +276,9 @@ do
     fake_module_scripts[script] = module_script
 end
 
+-- Fake Local Scripts:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-local function DKSJM_fake_script()
+local function MIAH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -304,7 +307,7 @@ local function DKSJM_fake_script()
 		end
 	end)
 end
-local function NFBNLFH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+local function OUCHKZ_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_getkey"]
@@ -323,7 +326,7 @@ local function NFBNLFH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese
 		setclipboard(tostring(oi.GetKeyLink))
 	end)
 end
-local function TRLOWG_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+local function DEZSN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
     local script = Instance.new("LocalScript")
     script.Name = "LoaderManager"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -479,7 +482,7 @@ local function TRLOWG_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	SetText("")
 	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 188,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
 	wait(1)
-	--load("https://raw.githubusercontent.com/rphzz/Nebula/main/NebulaMain.lua")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GlopGlopLinduh/GOku-presente-/main/K"))()
 	ShowTextBox()
 	ShowButton()
 	HideProgressBar()
@@ -500,6 +503,6 @@ local function TRLOWG_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	end)
 end
 
-coroutine.wrap(DKSJM_fake_script)()
-coroutine.wrap(NFBNLFH_fake_script)()
-coroutine.wrap(TRLOWG_fake_script)()	
+coroutine.wrap(MIAH_fake_script)()
+coroutine.wrap(OUCHKZ_fake_script)()
+coroutine.wrap(DEZSN_fake_script)()
