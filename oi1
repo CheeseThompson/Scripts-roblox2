@@ -1,7 +1,3 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
-
--- Instances:
-
 local Converted = {
 	["_KeySystem_Cheese"] = Instance.new("ScreenGui");
 	["_MainFrame"] = Instance.new("Frame");
@@ -44,8 +40,8 @@ Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.
 Converted["_MainFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_MainFrame"].BorderSizePixel = 0
 Converted["_MainFrame"].ClipsDescendants = true
-Converted["_MainFrame"].Position = UDim2.new(0.499618024, 0, 0.498148113, 0)
-Converted["_MainFrame"].Size = UDim2.new(0, 387, 0, 225)
+Converted["_MainFrame"].Position = UDim2.new(0, 770, 0, 397)
+Converted["_MainFrame"].Size = UDim2.new(0.250972748, 0, 0.281954885, 0)
 Converted["_MainFrame"].Name = "MainFrame"
 Converted["_MainFrame"].Parent = Converted["_KeySystem_Cheese"]
 
@@ -59,8 +55,8 @@ Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].BackgroundTransparency = 1
 Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Title"].BorderSizePixel = 0
-Converted["_Title"].Position = UDim2.new(0.217054263, 0, 0.438016504, 0)
-Converted["_Title"].Size = UDim2.new(0, 220, 0, 29)
+Converted["_Title"].Position = UDim2.new(0, 83, 0, 98)
+Converted["_Title"].Size = UDim2.new(0.568475485, 0, 0.12888889, 0)
 Converted["_Title"].Name = "Title"
 Converted["_Title"].Parent = Converted["_MainFrame"]
 
@@ -73,8 +69,8 @@ Converted["_Description"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Description"].BackgroundTransparency = 1
 Converted["_Description"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Description"].BorderSizePixel = 0
-Converted["_Description"].Position = UDim2.new(0, 0, 0.834710717, 0)
-Converted["_Description"].Size = UDim2.new(0, 387, 0, 29)
+Converted["_Description"].Position = UDim2.new(0, 0, 0, 187)
+Converted["_Description"].Size = UDim2.new(1.00000012, 0, 0.12888889, 0)
 Converted["_Description"].Name = "Description"
 Converted["_Description"].Parent = Converted["_MainFrame"]
 
@@ -87,8 +83,8 @@ Converted["_PoweringImagination"].BackgroundColor3 = Color3.fromRGB(255, 255, 25
 Converted["_PoweringImagination"].BackgroundTransparency = 1
 Converted["_PoweringImagination"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_PoweringImagination"].BorderSizePixel = 0
-Converted["_PoweringImagination"].Position = UDim2.new(0.242894053, 0, 0.557851255, 0)
-Converted["_PoweringImagination"].Size = UDim2.new(0, 200, 0, 29)
+Converted["_PoweringImagination"].Position = UDim2.new(0, 93, 0, 125)
+Converted["_PoweringImagination"].Size = UDim2.new(0.516795933, 0, 0.12888889, 0)
 Converted["_PoweringImagination"].Name = "PoweringImagination"
 Converted["_PoweringImagination"].Parent = Converted["_MainFrame"]
 
@@ -101,8 +97,8 @@ Converted["_Credits"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Credits"].BackgroundTransparency = 1
 Converted["_Credits"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Credits"].BorderSizePixel = 0
-Converted["_Credits"].Position = UDim2.new(0.268733859, 0, 0.318181813, 0)
-Converted["_Credits"].Size = UDim2.new(0, 179, 0, 29)
+Converted["_Credits"].Position = UDim2.new(0, 103, 0, 71)
+Converted["_Credits"].Size = UDim2.new(0.462532341, 0, 0.12888889, 0)
 Converted["_Credits"].Visible = false
 Converted["_Credits"].Name = "Credits"
 Converted["_Credits"].Parent = Converted["_MainFrame"]
@@ -127,8 +123,8 @@ Converted["_ProgressBar"].BackgroundColor3 = Color3.fromRGB(50.00000461935997, 5
 Converted["_ProgressBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ProgressBar"].BorderSizePixel = 0
 Converted["_ProgressBar"].ClipsDescendants = true
-Converted["_ProgressBar"].Position = UDim2.new(0.255813956, 0, 0.75111109, 0)
-Converted["_ProgressBar"].Size = UDim2.new(0, 188, 0, 18)
+Converted["_ProgressBar"].Position = UDim2.new(0, 98, 0, 168)
+Converted["_ProgressBar"].Size = UDim2.new(0.485788107, 0, 0.0799999982, 0)
 Converted["_ProgressBar"].Visible = false
 Converted["_ProgressBar"].Name = "ProgressBar"
 Converted["_ProgressBar"].Parent = Converted["_MainFrame"]
@@ -163,7 +159,7 @@ Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(36.00000165402889, 36.00
 Converted["_TextBox"].BackgroundTransparency = 0.44999998807907104
 Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextBox"].BorderSizePixel = 0
-Converted["_TextBox"].Position = UDim2.new(0.49870801, 0, 0.503452718, 0)
+Converted["_TextBox"].Position = UDim2.new(0, 192, 0, 113)
 Converted["_TextBox"].Parent = Converted["_MainFrame"]
 
 Converted["_UICorner"].CornerRadius = UDim.new(0, 7)
@@ -185,8 +181,8 @@ Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 4
 Converted["_TextButton"].BackgroundTransparency = 0.4000000059604645
 Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextButton"].BorderSizePixel = 0
-Converted["_TextButton"].Position = UDim2.new(0.0355090536, 0, 0.813000083, 0)
-Converted["_TextButton"].Size = UDim2.new(0, 128, 0, 33)
+Converted["_TextButton"].Position = UDim2.new(0, 13, 0, 182)
+Converted["_TextButton"].Size = UDim2.new(0.330749363, 0, 0.146666661, 0)
 Converted["_TextButton"].Visible = false
 Converted["_TextButton"].Parent = Converted["_MainFrame"]
 
@@ -209,8 +205,8 @@ Converted["_getkey"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.00
 Converted["_getkey"].BackgroundTransparency = 0.4000000059604645
 Converted["_getkey"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_getkey"].BorderSizePixel = 0
-Converted["_getkey"].Position = UDim2.new(0.382118881, 0, 0.808888912, 0)
-Converted["_getkey"].Size = UDim2.new(0, 123, 0, 33)
+Converted["_getkey"].Position = UDim2.new(0, 147, 0, 182)
+Converted["_getkey"].Size = UDim2.new(0.31782946, 0, 0.146666661, 0)
 Converted["_getkey"].Visible = false
 Converted["_getkey"].Name = "getkey"
 Converted["_getkey"].Parent = Converted["_MainFrame"]
@@ -227,14 +223,15 @@ Converted["_UICorner2"].Parent = Converted["_getkey"]
 
 
 
+-- CONFIGURAÇÕES
 
 
 
---       [[  CONFIGURAÇÕES  ]]
+
 
 local fake_module_scripts = {}
 
-do 
+do
     local script = Instance.new("ModuleScript")
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -278,9 +275,7 @@ end
 
 
 
-
-
-local function ZAGU_fake_script() 
+local function DKSJM_fake_script()
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -309,7 +304,7 @@ local function ZAGU_fake_script()
 		end
 	end)
 end
-local function RTNNTH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+local function NFBNLFH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_getkey"]
@@ -328,7 +323,7 @@ local function RTNNTH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 		setclipboard(tostring(oi.GetKeyLink))
 	end)
 end
-local function CDPYTV_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+local function TRLOWG_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
     local script = Instance.new("LocalScript")
     script.Name = "LoaderManager"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -505,6 +500,6 @@ local function CDPYTV_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	end)
 end
 
-coroutine.wrap(ZAGU_fake_script)()
-coroutine.wrap(RTNNTH_fake_script)()
-coroutine.wrap(CDPYTV_fake_script)()
+coroutine.wrap(DKSJM_fake_script)()
+coroutine.wrap(NFBNLFH_fake_script)()
+coroutine.wrap(TRLOWG_fake_script)()	
