@@ -223,6 +223,10 @@ do
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
 	local function module_script()
+			local http = game:GetService("HttpService")
+
+		    local url = "https://pastebin.com/raw/xr1UzENB"
+			local response = game:HttpGet(url)
 			
 		local Settings = {
 			
