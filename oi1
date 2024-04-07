@@ -1,3 +1,7 @@
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+
+-- Instances:
+
 local Converted = {
 	["_KeySystem_Cheese"] = Instance.new("ScreenGui");
 	["_MainFrame"] = Instance.new("Frame");
@@ -244,7 +248,7 @@ end
 
 -- Fake Local Scripts:
 
-local function MEHEO_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
+local function VDDD_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -261,6 +265,7 @@ local function MEHEO_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.M
 	oldText=""
 	script.Parent.MouseButton1Click:Connect(function()
 		if script.Parent.Parent.TextBox.Text == oi.Key then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GlopGlopLinduh/GOku-presente-/main/K"))()
 			oldText=script.Parent.Parent.PoweringImagination.Text
 			script.Parent.Parent.PoweringImagination.Text = "Chave Correta!"
 			wait(1)
@@ -273,7 +278,7 @@ local function MEHEO_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.M
 		end
 	end)
 end
-local function NRRXN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+local function SDYZSQX_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_getkey"]
@@ -292,7 +297,7 @@ local function NRRXN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.M
 		setclipboard(tostring(oi.GetKeyLink))
 	end)
 end
-local function WTVKFP_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+local function OCCIXK_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
     local script = Instance.new("LocalScript")
     script.Name = "LoaderManager"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -448,7 +453,6 @@ local function WTVKFP_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	SetText("")
 	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 188,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
 	wait(1)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/GlopGlopLinduh/GOku-presente-/main/K"))()
 	ShowTextBox()
 	ShowButton()
 	HideProgressBar()
@@ -469,6 +473,6 @@ local function WTVKFP_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	end)
 end
 
-coroutine.wrap(MEHEO_fake_script)()
-coroutine.wrap(NRRXN_fake_script)()
-coroutine.wrap(WTVKFP_fake_script)()
+coroutine.wrap(VDDD_fake_script)()
+coroutine.wrap(SDYZSQX_fake_script)()
+coroutine.wrap(OCCIXK_fake_script)()
