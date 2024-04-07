@@ -1,879 +1,510 @@
-shared.VapeIndependent = true
-shared.CustomSaveVape = "TS"
-local GuiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/MainScript.lua", true))()local Combat = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api
-local Blatant = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api
-local Render = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api
-local Utility = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api
-local World = GuiLibrary.ObjectsThatCanBeSaved.WorldWindow.Api
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
 
-local GuiLibrary = shared.GuiLibrary
-local playersService = game:GetService("Players")
-local textService = game:GetService("TextService")
-local lightingService = game:GetService("Lighting")
-local textChatService = game:GetService("TextChatService")
-local inputService = game:GetService("UserInputService")
-local runService = game:GetService("RunService")
-local replicatedStorageService = game:GetService("ReplicatedStorage")
-local tweenService = game:GetService("TweenService")
-local gameCamera = workspace.CurrentCamera
-local lplr = playersService.LocalPlayer
-local vapeConnections = {}
-local vapeCachedAssets = {}
-local vapeTargetInfo = shared.VapeTargetInfo
-local vapeInjected = true
-table.insert(vapeConnections, workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
-	gameCamera = workspace.CurrentCamera or workspace:FindFirstChildWhichIsA("Camera")
-end))
-local isfile = isfile or function(file)
-	local suc, res = pcall(function() return readfile(file) end)
-	return suc and res ~= nil
-end
-local networkownerswitch = tick()
-local isnetworkowner = function(part)
-	local suc, res = pcall(function() return gethiddenproperty(part, "NetworkOwnershipRule") end)
-	if suc and res == Enum.NetworkOwnership.Manual then 
-		sethiddenproperty(part, "NetworkOwnershipRule", Enum.NetworkOwnership.Automatic)
-		networkownerswitch = tick() + 8
-	end
-	return networkownerswitch <= tick()
-end
-local vapeAssetTable = {["vape/assets/VapeCape.png"] = "rbxassetid://13380453812", ["vape/assets/ArrowIndicator.png"] = "rbxassetid://13350766521"}
-local getcustomasset = getsynasset or getcustomasset or function(location) return vapeAssetTable[location] or "" end
-local queueonteleport = syn and syn.queue_on_teleport or queue_on_teleport or function() end
-local synapsev3 = syn and syn.toast_notification and "V3" or ""
-local worldtoscreenpoint = function(pos)
-	if synapsev3 == "V3" then 
-		local scr = worldtoscreen({pos})
-		return scr[1] - Vector3.new(0, 36, 0), scr[1].Z > 0
-	end
-	return gameCamera.WorldToScreenPoint(gameCamera, pos)
-end
-local worldtoviewportpoint = function(pos)
-	if synapsev3 == "V3" then 
-		local scr = worldtoscreen({pos})
-		return scr[1], scr[1].Z > 0
-	end
-	return gameCamera.WorldToViewportPoint(gameCamera, pos)
+-- Instances:
+
+local Converted = {
+	["_KeySystem_Cheese"] = Instance.new("ScreenGui");
+	["_MainFrame"] = Instance.new("Frame");
+	["_Title"] = Instance.new("TextLabel");
+	["_Description"] = Instance.new("TextLabel");
+	["_PoweringImagination"] = Instance.new("TextLabel");
+	["_Credits"] = Instance.new("TextLabel");
+	["_ImageLabel"] = Instance.new("ImageLabel");
+	["_Corner"] = Instance.new("UICorner");
+	["_ProgressBar"] = Instance.new("Frame");
+	["_Corner1"] = Instance.new("UICorner");
+	["_Content"] = Instance.new("Frame");
+	["_Corner2"] = Instance.new("UICorner");
+	["_Corner3"] = Instance.new("UICorner");
+	["_TextBox"] = Instance.new("TextBox");
+	["_UICorner"] = Instance.new("UICorner");
+	["_UIGradient"] = Instance.new("UIGradient");
+	["_TextButton"] = Instance.new("TextButton");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_UIGradient1"] = Instance.new("UIGradient");
+	["_getkey"] = Instance.new("TextButton");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_LoaderManager"] = Instance.new("LocalScript");
+	["_Settings"] = Instance.new("ModuleScript");
+}
+
+-- Properties:
+
+Converted["_KeySystem_Cheese"].IgnoreGuiInset = true
+Converted["_KeySystem_Cheese"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_KeySystem_Cheese"].ResetOnSpawn = false
+Converted["_KeySystem_Cheese"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_KeySystem_Cheese"].Name = "KeySystem_Cheese"
+Converted["_KeySystem_Cheese"].Parent = game:GetService("CoreGui")
+
+Converted["_MainFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.00000123679638, 43.00000123679638)
+Converted["_MainFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MainFrame"].BorderSizePixel = 0
+Converted["_MainFrame"].ClipsDescendants = true
+Converted["_MainFrame"].Position = UDim2.new(0.499618024, 0, 0.498148113, 0)
+Converted["_MainFrame"].Size = UDim2.new(0, 387, 0, 225)
+Converted["_MainFrame"].Name = "MainFrame"
+Converted["_MainFrame"].Parent = Converted["_KeySystem_Cheese"]
+
+Converted["_Title"].Font = Enum.Font.Gotham
+Converted["_Title"].RichText = true
+Converted["_Title"].Text = "<b>Script Do </b>Cheese"
+Converted["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].TextSize = 27
+Converted["_Title"].TextWrapped = true
+Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].BackgroundTransparency = 1
+Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Title"].BorderSizePixel = 0
+Converted["_Title"].Position = UDim2.new(0.217054263, 0, 0.438016504, 0)
+Converted["_Title"].Size = UDim2.new(0, 220, 0, 29)
+Converted["_Title"].Name = "Title"
+Converted["_Title"].Parent = Converted["_MainFrame"]
+
+Converted["_Description"].Font = Enum.Font.Gotham
+Converted["_Description"].Text = "Loading..."
+Converted["_Description"].TextColor3 = Color3.fromRGB(122.00000792741776, 122.00000792741776, 122.00000792741776)
+Converted["_Description"].TextSize = 14
+Converted["_Description"].TextWrapped = true
+Converted["_Description"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Description"].BackgroundTransparency = 1
+Converted["_Description"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Description"].BorderSizePixel = 0
+Converted["_Description"].Position = UDim2.new(0, 0, 0.834710717, 0)
+Converted["_Description"].Size = UDim2.new(0, 387, 0, 29)
+Converted["_Description"].Name = "Description"
+Converted["_Description"].Parent = Converted["_MainFrame"]
+
+Converted["_PoweringImagination"].Font = Enum.Font.Gotham
+Converted["_PoweringImagination"].Text = "Ultimate Script Hub"
+Converted["_PoweringImagination"].TextColor3 = Color3.fromRGB(190.0000038743019, 190.0000038743019, 190.0000038743019)
+Converted["_PoweringImagination"].TextSize = 14
+Converted["_PoweringImagination"].TextWrapped = true
+Converted["_PoweringImagination"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_PoweringImagination"].BackgroundTransparency = 1
+Converted["_PoweringImagination"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_PoweringImagination"].BorderSizePixel = 0
+Converted["_PoweringImagination"].Position = UDim2.new(0.242894053, 0, 0.557851255, 0)
+Converted["_PoweringImagination"].Size = UDim2.new(0, 200, 0, 29)
+Converted["_PoweringImagination"].Name = "PoweringImagination"
+Converted["_PoweringImagination"].Parent = Converted["_MainFrame"]
+
+Converted["_Credits"].Font = Enum.Font.Gotham
+Converted["_Credits"].Text = "Loader made by @raphaelso"
+Converted["_Credits"].TextColor3 = Color3.fromRGB(88.00000235438347, 88.00000235438347, 88.00000235438347)
+Converted["_Credits"].TextSize = 12
+Converted["_Credits"].TextWrapped = true
+Converted["_Credits"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Credits"].BackgroundTransparency = 1
+Converted["_Credits"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Credits"].BorderSizePixel = 0
+Converted["_Credits"].Position = UDim2.new(0.268733859, 0, 0.318181813, 0)
+Converted["_Credits"].Size = UDim2.new(0, 179, 0, 29)
+Converted["_Credits"].Visible = false
+Converted["_Credits"].Name = "Credits"
+Converted["_Credits"].Parent = Converted["_MainFrame"]
+
+Converted["_ImageLabel"].Image = "http://www.roblox.com/asset/?id=10527571475"
+Converted["_ImageLabel"].ImageColor3 = Color3.fromRGB(226.00001692771912, 226.00001692771912, 226.00001692771912)
+Converted["_ImageLabel"].ImageTransparency = 0.7400000095367432
+Converted["_ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel"].BackgroundTransparency = 1
+Converted["_ImageLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel"].BorderSizePixel = 0
+Converted["_ImageLabel"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ImageLabel"].Visible = false
+Converted["_ImageLabel"].ZIndex = 0
+Converted["_ImageLabel"].Parent = Converted["_MainFrame"]
+
+Converted["_Corner"].CornerRadius = UDim.new(0, 15)
+Converted["_Corner"].Name = "Corner"
+Converted["_Corner"].Parent = Converted["_ImageLabel"]
+
+Converted["_ProgressBar"].BackgroundColor3 = Color3.fromRGB(50.00000461935997, 50.00000461935997, 50.00000461935997)
+Converted["_ProgressBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ProgressBar"].BorderSizePixel = 0
+Converted["_ProgressBar"].ClipsDescendants = true
+Converted["_ProgressBar"].Position = UDim2.new(0.255813956, 0, 0.75111109, 0)
+Converted["_ProgressBar"].Size = UDim2.new(0, 188, 0, 18)
+Converted["_ProgressBar"].Visible = false
+Converted["_ProgressBar"].Name = "ProgressBar"
+Converted["_ProgressBar"].Parent = Converted["_MainFrame"]
+
+Converted["_Corner1"].CornerRadius = UDim.new(0, 15)
+Converted["_Corner1"].Name = "Corner"
+Converted["_Corner1"].Parent = Converted["_ProgressBar"]
+
+Converted["_Content"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Content"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Content"].BorderSizePixel = 0
+Converted["_Content"].Position = UDim2.new(0, 0, -1.69542102e-06, 0)
+Converted["_Content"].Size = UDim2.new(0, 0, 0, 18)
+Converted["_Content"].Name = "Content"
+Converted["_Content"].Parent = Converted["_ProgressBar"]
+
+Converted["_Corner2"].CornerRadius = UDim.new(0, 15)
+Converted["_Corner2"].Name = "Corner"
+Converted["_Corner2"].Parent = Converted["_Content"]
+
+Converted["_Corner3"].CornerRadius = UDim.new(0, 15)
+Converted["_Corner3"].Name = "Corner"
+Converted["_Corner3"].Parent = Converted["_MainFrame"]
+
+Converted["_TextBox"].Font = Enum.Font.Gotham
+Converted["_TextBox"].RichText = true
+Converted["_TextBox"].Text = ""
+Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox"].TextSize = 14
+Converted["_TextBox"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)
+Converted["_TextBox"].BackgroundTransparency = 0.44999998807907104
+Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox"].BorderSizePixel = 0
+Converted["_TextBox"].Position = UDim2.new(0.49870801, 0, 0.503452718, 0)
+Converted["_TextBox"].Parent = Converted["_MainFrame"]
+
+Converted["_UICorner"].CornerRadius = UDim.new(0, 7)
+Converted["_UICorner"].Parent = Converted["_TextBox"]
+
+Converted["_UIGradient"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(22.000000588595867, 75.00000312924385, 161.0000056028366))
+}
+Converted["_UIGradient"].Rotation = 42
+Converted["_UIGradient"].Parent = Converted["_TextBox"]
+
+Converted["_TextButton"].Font = Enum.Font.Gotham
+Converted["_TextButton"].Text = "Submit"
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].AutoButtonColor = false
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.000004678964615, 49.000004678964615)
+Converted["_TextButton"].BackgroundTransparency = 0.4000000059604645
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Position = UDim2.new(0.0355090536, 0, 0.813000083, 0)
+Converted["_TextButton"].Size = UDim2.new(0, 128, 0, 33)
+Converted["_TextButton"].Visible = false
+Converted["_TextButton"].Parent = Converted["_MainFrame"]
+
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 7)
+Converted["_UICorner1"].Parent = Converted["_TextButton"]
+
+Converted["_UIGradient1"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(22.000000588595867, 75.00000312924385, 161.0000056028366))
+}
+Converted["_UIGradient1"].Rotation = 42
+Converted["_UIGradient1"].Parent = Converted["_MainFrame"]
+
+Converted["_getkey"].Font = Enum.Font.Gotham
+Converted["_getkey"].Text = "Get Key"
+Converted["_getkey"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_getkey"].TextSize = 14
+Converted["_getkey"].AutoButtonColor = false
+Converted["_getkey"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.000004678964615, 49.000004678964615)
+Converted["_getkey"].BackgroundTransparency = 0.4000000059604645
+Converted["_getkey"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_getkey"].BorderSizePixel = 0
+Converted["_getkey"].Position = UDim2.new(0.382118881, 0, 0.808888912, 0)
+Converted["_getkey"].Size = UDim2.new(0, 123, 0, 33)
+Converted["_getkey"].Visible = false
+Converted["_getkey"].Name = "getkey"
+Converted["_getkey"].Parent = Converted["_MainFrame"]
+
+Converted["_UICorner2"].CornerRadius = UDim.new(0, 7)
+Converted["_UICorner2"].Parent = Converted["_getkey"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+--       [[  CONFIGURAÇÕES  ]]
+
+local fake_module_scripts = {}
+
+do 
+    local script = Instance.new("ModuleScript")
+    script.Name = "Settings"
+    script.Parent = Converted["_KeySystem_Cheese"]
+    local function module_script()
+		local Settings = {
+			TitleText = "Script Do <b>Cheese</b>",-- O título do script
+			DescriptionText = "milhô escript do planeta terra", -- O texto embaixo do script
+			UIGradientEnabled = true, -- Se o efeito azulado aparece
+			ProgressBarEnabled = true, -- Se a barra de progresso aparece
+			AnimatedText = true, -- Se é animado
+			GoofyBackground = false, -- Plano de fundo
+			GoofyBackgroundID = 10527571475, -- ID do plano de fundo
+			GetKeyLink = "https://google.com",
+			
+			Key = "CHAVE1"  -- Sua chave
+		}
+		
+		return Settings
+		
+    end
+    fake_module_scripts[script] = module_script
 end
 
-local function vapeGithubRequest(scripturl)
-	if not isfile("vape/"..scripturl) then
-		local suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
-		assert(suc, res)
-		assert(res ~= "404: Not Found", res)
-		if scripturl:find(".lua") then res = "--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.\n"..res end
-		writefile("vape/"..scripturl, res)
-	end
-	return readfile("vape/"..scripturl)
-end
 
-local function downloadVapeAsset(path)
-	if not isfile(path) then
-		task.spawn(function()
-			local textlabel = Instance.new("TextLabel")
-			textlabel.Size = UDim2.new(1, 0, 0, 36)
-			textlabel.Text = "Downloading "..path
-			textlabel.BackgroundTransparency = 1
-			textlabel.TextStrokeTransparency = 0
-			textlabel.TextSize = 30
-			textlabel.Font = Enum.Font.SourceSans
-			textlabel.TextColor3 = Color3.new(1, 1, 1)
-			textlabel.Position = UDim2.new(0, 0, 0, -36)
-			textlabel.Parent = GuiLibrary.MainGui
-			repeat task.wait() until isfile(path)
-			textlabel:Destroy()
-		end)
-		local suc, req = pcall(function() return vapeGithubRequest(path:gsub("vape/assets", "assets")) end)
-        if suc and req then
-		    writefile(path, req)
-        else
-            return ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local function ZAGU_fake_script() 
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
         end
-	end
-	if not vapeCachedAssets[path] then vapeCachedAssets[path] = getcustomasset(path) end
-	return vapeCachedAssets[path] 
-end
+        return req(obj)
+    end
 
-local function warningNotification(title, text, delay)
-	local suc, res = pcall(function()
-		local frame = GuiLibrary.CreateNotification(title, text, delay, "assets/WarningNotification.png")
-		frame.Frame.Frame.ImageColor3 = Color3.fromRGB(236, 129, 44)
-		return frame
-	end)
-	return (suc and res)
-end
-
-local function runFunction(func) func() end
-
-local function isFriend(plr, recolor)
-	if GuiLibrary.ObjectsThatCanBeSaved["Use FriendsToggle"].Api.Enabled then
-		local friend = table.find(GuiLibrary.ObjectsThatCanBeSaved.FriendsListTextCircleList.Api.ObjectList, plr.Name)
-		friend = friend and GuiLibrary.ObjectsThatCanBeSaved.FriendsListTextCircleList.Api.ObjectListEnabled[friend]
-		if recolor then
-			friend = friend and GuiLibrary.ObjectsThatCanBeSaved["Recolor visualsToggle"].Api.Enabled
+	local oi = require(script.Parent.Parent.Parent.Settings)
+	oldText=""
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.TextBox.Text == oi.Key then
+			oldText=script.Parent.Parent.PoweringImagination.Text
+			script.Parent.Parent.PoweringImagination.Text = "Chave Correta!"
+			wait(1)
+			script.Parent.Parent.PoweringImagination.Text = oldText
+		else
+			oldText=script.Parent.Parent.PoweringImagination.Text
+			script.Parent.Parent.PoweringImagination.Text = "Chave incorreta!"
+			wait(1)
+			script.Parent.Parent.PoweringImagination.Text = oldText
 		end
-		return friend
-	end
-	return nil
-end
-
-local function isTarget(plr)
-	local friend = table.find(GuiLibrary.ObjectsThatCanBeSaved.TargetsListTextCircleList.Api.ObjectList, plr.Name)
-	friend = friend and GuiLibrary.ObjectsThatCanBeSaved.TargetsListTextCircleList.Api.ObjectListEnabled[friend]
-	return friend
-end
-
-local function isVulnerable(plr)
-	return plr.Humanoid.Health > 0 and not plr.Character.FindFirstChildWhichIsA(plr.Character, "ForceField")
-end
-
-local function getPlayerColor(plr)
-	if isFriend(plr, true) then
-		return Color3.fromHSV(GuiLibrary.ObjectsThatCanBeSaved["Friends ColorSliderColor"].Api.Hue, GuiLibrary.ObjectsThatCanBeSaved["Friends ColorSliderColor"].Api.Sat, GuiLibrary.ObjectsThatCanBeSaved["Friends ColorSliderColor"].Api.Value)
-	end
-	return tostring(plr.TeamColor) ~= "White" and plr.TeamColor.Color
-end
-
-local entityLibrary = loadstring(vapeGithubRequest("Libraries/entityHandler.lua"))()
-shared.vapeentity = entityLibrary
-do
-	entityLibrary.selfDestruct()
-	table.insert(vapeConnections, GuiLibrary.ObjectsThatCanBeSaved.FriendsListTextCircleList.Api.FriendRefresh.Event:Connect(function()
-		entityLibrary.fullEntityRefresh()
-	end))
-	table.insert(vapeConnections, GuiLibrary.ObjectsThatCanBeSaved["Teams by colorToggle"].Api.Refresh.Event:Connect(function()
-		entityLibrary.fullEntityRefresh()
-	end))
-	local oldUpdateBehavior = entityLibrary.getUpdateConnections
-	entityLibrary.getUpdateConnections = function(newEntity)
-		local oldUpdateConnections = oldUpdateBehavior(newEntity)
-		table.insert(oldUpdateConnections, {Connect = function() 
-			newEntity.Friend = isFriend(newEntity.Player) and true
-			newEntity.Target = isTarget(newEntity.Player) and true
-			return {Disconnect = function() end}
-		end})
-		return oldUpdateConnections
-	end
-	entityLibrary.isPlayerTargetable = function(plr)
-		if isFriend(plr) then return false end
-		if (not GuiLibrary.ObjectsThatCanBeSaved["Teams by colorToggle"].Api.Enabled) then return true end
-		if (not lplr.Team) then return true end
-		if (not plr.Team) then return true end
-		if plr.Team ~= lplr.Team then return true end
-        return #plr.Team:GetPlayers() == playersService.NumPlayers
-	end
-	entityLibrary.fullEntityRefresh()
-	entityLibrary.LocalPosition = Vector3.zero
-
-	task.spawn(function()
-		local postable = {}
-		repeat
-			task.wait()
-			if entityLibrary.isAlive then
-				table.insert(postable, {Time = tick(), Position = entityLibrary.character.HumanoidRootPart.Position})
-				if #postable > 100 then 
-					table.remove(postable, 1)
-				end
-				local closestmag = 9e9
-				local closestpos = entityLibrary.character.HumanoidRootPart.Position
-				local currenttime = tick()
-				for i, v in pairs(postable) do 
-					local mag = 0.1 - (currenttime - v.Time)
-					if mag < closestmag and mag > 0 then
-						closestmag = mag
-						closestpos = v.Position
-					end
-				end
-				entityLibrary.LocalPosition = closestpos
-			end
-		until not vapeInjected
 	end)
 end
+local function RTNNTH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_getkey"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-local function calculateMoveVector(cameraRelativeMoveVector)
-	local c, s
-	local _, _, _, R00, R01, R02, _, _, R12, _, _, R22 = gameCamera.CFrame:GetComponents()
-	if R12 < 1 and R12 > -1 then
-		c = R22
-		s = R02
-	else
-		c = R00
-		s = -R01*math.sign(R12)
-	end
-	local norm = math.sqrt(c*c + s*s)
-	return Vector3.new(
-		(c*cameraRelativeMoveVector.X + s*cameraRelativeMoveVector.Z)/norm,
-		0,
-		(c*cameraRelativeMoveVector.Z - s*cameraRelativeMoveVector.X)/norm
-	)
-end
-
-local WhitelistFunctions = {StoredHashes = {}, WhitelistTable = {WhitelistedUsers = {}}, Loaded = false, CustomTags = {}, LocalPriority = 0}
-do
-	local shalib
-
-	task.spawn(function()
-		local whitelistloaded
-		whitelistloaded = pcall(function()
-			local commit = "main"
-			for i,v in pairs(game:HttpGet("https://github.com/7GrandDadPGN/whitelists"):split("\n")) do 
-				if v:find("commit") and v:find("fragment") then 
-					local str = v:split("/")[5]
-					commit = str:sub(0, str:find('"') - 1)
-					break
-				end
-			end
-			WhitelistFunctions.WhitelistTable = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/whitelists/"..commit.."/PlayerWhitelist.json", true))
-		end)
-		shalib = loadstring(vapeGithubRequest("Libraries/sha.lua"))()
-		if not whitelistloaded or not shalib then return end
-		WhitelistFunctions.Loaded = true
-		WhitelistFunctions.LocalPriority = WhitelistFunctions:GetWhitelist(lplr)
-		entityLibrary.fullEntityRefresh()
+	local oi = require(script.Parent.Parent.Parent.Settings)
+	oldText=""
+	script.Parent.MouseButton1Click:Connect(function()
+		setclipboard(tostring(oi.GetKeyLink))
 	end)
-
-	function WhitelistFunctions:GetWhitelist(plr)
-		local plrstr = WhitelistFunctions:Hash(plr.Name..plr.UserId)
-		for i,v in pairs(WhitelistFunctions.WhitelistTable.WhitelistedUsers) do
-			if v.hash == plrstr then
-				return v.level, v.attackable or WhitelistFunctions.LocalPriority > v.level, v.tags
-			end
-		end
-		return 0, true
-	end
-
-	function WhitelistFunctions:GetTag(plr)
-		local plrstr, plrattackable, plrtag = WhitelistFunctions:GetWhitelist(plr)
-		local hash = WhitelistFunctions:Hash(plr.Name..plr.UserId)
-		local newtag = WhitelistFunctions.CustomTags[plr.Name] or ""
-		if plrtag then
-			for i2,v2 in pairs(plrtag) do
-				newtag = newtag..'['..v2.text..'] '
-			end
-		end
-		return newtag
-	end
-
-	function WhitelistFunctions:Hash(str)
-		if WhitelistFunctions.StoredHashes[str] == nil and shalib then
-			WhitelistFunctions.StoredHashes[str] = shalib.sha512(str.."SelfReport")
-		end
-		return WhitelistFunctions.StoredHashes[str] or ""
-	end
-
-	function WhitelistFunctions:CheckWhitelisted(plr)
-		local playertype = WhitelistFunctions:GetWhitelist(plr)
-		if playertype ~= 0 then 
-			return true
-		end
-		return false
-	end
-
-	function WhitelistFunctions:IsSpecialIngame()
-		for i,v in pairs(playersService:GetPlayers()) do 
-			if WhitelistFunctions:CheckWhitelisted(v) then 
-				return true
-			end
-		end
-		return false
-	end
 end
-shared.vapewhitelist = WhitelistFunctions
+local function CDPYTV_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+    local script = Instance.new("LocalScript")
+    script.Name = "LoaderManager"
+    script.Parent = Converted["_KeySystem_Cheese"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-local RunLoops = {RenderStepTable = {}, StepTable = {}, HeartTable = {}}
-do
-	function RunLoops:BindToRenderStep(name, func)
-		if RunLoops.RenderStepTable[name] == nil then
-			RunLoops.RenderStepTable[name] = runService.RenderStepped:Connect(func)
+	-- Loader made by @raphaelso | raphael_co on Discord
+	-- Code not written in pt br
+	-- thanks for skidding if you are seeing this goofy ahh code 
+	
+	
+	--// omaga
+	local Key = "DESABILITADO_NAO_FUNCIONA_MAIS_uwu"
+	
+	-- // dependencias de ui
+	
+	local MainFrame = script.Parent:FindFirstChild('MainFrame')
+	local Title = MainFrame:FindFirstChild('Title')
+	local Description = MainFrame:FindFirstChild('Description')
+	local MainCorner = MainFrame:FindFirstChild('Corner')
+	local PI = MainFrame:FindFirstChild('PoweringImagination')
+	local Settings = require(script.Parent:FindFirstChild('Settings'))
+	
+	-- // dependencias
+	local TweenService = game:GetService('TweenService')
+	
+	-- // não sei
+	local TimeToWaitBeforeLoading = 2
+	local loaded
+	
+	-- // setar algumas coisas
+	Title.Position = UDim2.new(-0.517, 0,0.438, 0)
+	Description.Position = UDim2.new(0.0, 0,1, 0)
+	MainFrame.BackgroundTransparency = 1
+	--MainCorner.CornerRadius = UDim.new(0,0)
+	PI.TextTransparency = 1
+	--MainFrame.Position = UDim2.new(0.5, 0,1.136, 0)
+	script.Parent.MainFrame.ImageLabel.ImageTransparency = 1
+	script.Parent.MainFrame.ProgressBar.BackgroundTransparency = 1
+	script.Parent.MainFrame.ProgressBar.Content.BackgroundTransparency = 1
+	if Settings.UIGradientEnabled == true then
+		MainFrame:FindFirstChild('UIGradient').Enabled = false
+	end
+	if Settings.TitleText then
+		Title.Text = Settings.TitleText
+	end
+	if Settings.DescriptionText then
+		MainFrame:FindFirstChild('PoweringImagination').Text = Settings.DescriptionText
+	end
+	if Settings.ProgressBarEnabled == true then
+		MainFrame:FindFirstChild('ProgressBar').Visible = true
+	end
+	if Settings.GoofyBackground == true then
+		MainFrame:FindFirstChild('ImageLabel').Visible = true
+		if Settings.GoofyBackgroundID then
+			MainFrame:FindFirstChild('ImageLabel').Image = Settings.GoofyBackgroundID
 		end
 	end
-
-	function RunLoops:UnbindFromRenderStep(name)
-		if RunLoops.RenderStepTable[name] then
-			RunLoops.RenderStepTable[name]:Disconnect()
-			RunLoops.RenderStepTable[name] = nil
-		end
-	end
-
-	function RunLoops:BindToStepped(name, func)
-		if RunLoops.StepTable[name] == nil then
-			RunLoops.StepTable[name] = runService.Stepped:Connect(func)
-		end
-	end
-
-	function RunLoops:UnbindFromStepped(name)
-		if RunLoops.StepTable[name] then
-			RunLoops.StepTable[name]:Disconnect()
-			RunLoops.StepTable[name] = nil
-		end
-	end
-
-	function RunLoops:BindToHeartbeat(name, func)
-		if RunLoops.HeartTable[name] == nil then
-			RunLoops.HeartTable[name] = runService.Heartbeat:Connect(func)
-		end
-	end
-
-	function RunLoops:UnbindFromHeartbeat(name)
-		if RunLoops.HeartTable[name] then
-			RunLoops.HeartTable[name]:Disconnect()
-			RunLoops.HeartTable[name] = nil
-		end
-	end
-end
-
-runFunction(function()
-	local radargameCamera = Instance.new("Camera")
-	radargameCamera.FieldOfView = 45
-	local Radar = GuiLibrary.CreateCustomWindow({
-		Name = "Radar", 
-		Icon = "vape/assets/RadarIcon1.png",
-		IconSize = 16
-	})
-	local RadarColor = Radar.CreateColorSlider({
-		Name = "Player Color", 
-		Function = function(val) end
-	})
-	local RadarFrame = Instance.new("Frame")
-	RadarFrame.BackgroundColor3 = Color3.new()
-	RadarFrame.BorderSizePixel = 0
-	RadarFrame.BackgroundTransparency = 0.5
-	RadarFrame.Size = UDim2.new(0, 250, 0, 250)
-	RadarFrame.Parent = Radar.GetCustomChildren()
-	local RadarBorder1 = RadarFrame:Clone()
-	RadarBorder1.Size = UDim2.new(0, 6, 0, 250)
-	RadarBorder1.Parent = RadarFrame
-	local RadarBorder2 = RadarBorder1:Clone()
-	RadarBorder2.Position = UDim2.new(0, 6, 0, 0)
-	RadarBorder2.Size = UDim2.new(0, 238, 0, 6)
-	RadarBorder2.Parent = RadarFrame
-	local RadarBorder3 = RadarBorder1:Clone()
-	RadarBorder3.Position = UDim2.new(1, -6, 0, 0)
-	RadarBorder3.Size = UDim2.new(0, 6, 0, 250)
-	RadarBorder3.Parent = RadarFrame
-	local RadarBorder4 = RadarBorder1:Clone()
-	RadarBorder4.Position = UDim2.new(0, 6, 1, -6)
-	RadarBorder4.Size = UDim2.new(0, 238, 0, 6)
-	RadarBorder4.Parent = RadarFrame
-	local RadarBorder5 = RadarBorder1:Clone()
-	RadarBorder5.Position = UDim2.new(0, 0, 0.5, -1)
-	RadarBorder5.BackgroundColor3 = Color3.new(1, 1, 1)
-	RadarBorder5.Size = UDim2.new(0, 250, 0, 2)
-	RadarBorder5.Parent = RadarFrame
-	local RadarBorder6 = RadarBorder1:Clone()
-	RadarBorder6.Position = UDim2.new(0.5, -1, 0, 0)
-	RadarBorder6.BackgroundColor3 = Color3.new(1, 1, 1)
-	RadarBorder6.Size = UDim2.new(0, 2, 0, 124)
-	RadarBorder6.Parent = RadarFrame
-	local RadarBorder7 = RadarBorder1:Clone()
-	RadarBorder7.Position = UDim2.new(0.5, -1, 0, 126)
-	RadarBorder7.BackgroundColor3 = Color3.new(1, 1, 1)
-	RadarBorder7.Size = UDim2.new(0, 2, 0, 124)
-	RadarBorder7.Parent = RadarFrame
-	local RadarMainFrame = Instance.new("Frame")
-	RadarMainFrame.BackgroundTransparency = 1
-	RadarMainFrame.Size = UDim2.new(0, 250, 0, 250)
-	RadarMainFrame.Parent = RadarFrame
-	local radartable = {}
-	table.insert(vapeConnections, Radar.GetCustomChildren().Parent:GetPropertyChangedSignal("Size"):Connect(function()
-		RadarFrame.Position = UDim2.new(0, 0, 0, (Radar.GetCustomChildren().Parent.Size.Y.Offset == 0 and 45 or 0))
-	end))
-	GuiLibrary.ObjectsThatCanBeSaved.GUIWindow.Api.CreateCustomToggle({
-		Name = "Radar", 
-		Icon = "vape/assets/RadarIcon2.png", 
-		Function = function(callback)
-			Radar.SetVisible(callback) 
-			if callback then
-				RunLoops:BindToRenderStep("Radar", function() 
-					if entityLibrary.isAlive then
-						local v278 = (CFrame.new(0, 0, 0):inverse() * entityLibrary.character.HumanoidRootPart.CFrame).p * 0.2 * Vector3.new(1, 1, 1);
-						local v279, v280, v281 = gameCamera.CFrame:ToOrientation();
-						local u90 = v280 * 180 / math.pi;
-						local v277 = 0 - u90;
-						local v276 = v278 + Vector3.zero;
-						radargameCamera.CFrame = CFrame.new(v276 + Vector3.new(0, 50, 0)) * CFrame.Angles(0, -v277 * (math.pi / 180), 0) * CFrame.Angles(-90 * (math.pi / 180), 0, 0)
-						local done = {}
-						for i, plr in pairs(entityLibrary.entityList) do
-							table.insert(done, plr)
-							local thing
-							if radartable[plr] then
-								thing = radartable[plr]
-								if thing.Visible then
-									thing.Visible = false
-								end
-							else
-								thing = Instance.new("Frame")
-								thing.BackgroundTransparency = 0
-								thing.Size = UDim2.new(0, 4, 0, 4)
-								thing.BorderSizePixel = 1
-								thing.BorderColor3 = Color3.new()
-								thing.BackgroundColor3 = Color3.new()
-								thing.Visible = false
-								thing.Name = plr.Player.Name
-								thing.Parent = RadarMainFrame
-								radartable[plr] = thing
-							end
-							
-							local v238, v239 = radargameCamera:WorldToViewportPoint((CFrame.new(0, 0, 0):inverse() * plr.RootPart.CFrame).p * 0.2)
-							thing.Visible = true
-							thing.BackgroundColor3 = getPlayerColor(plr.Player) or Color3.fromHSV(RadarColor.Value, 1, 1)
-							thing.Position = UDim2.new(math.clamp(v238.X, 0.03, 0.97), -2, math.clamp(v238.Y, 0.03, 0.97), -2)
-						end
-						for i, v in pairs(radartable) do 
-							if not table.find(done, i) then 
-								radartable[i] = nil
-								v:Destroy()
-							end
-						end
-					end
-				end)
-			else
-				RunLoops:UnbindFromRenderStep("Radar")
-				RadarMainFrame:ClearAllChildren()
-				table.clear(radartable)
-			end
-		end, 
-		Priority = 1
-	})
-end)
-
-runFunction(function()
-	local ClickTP = {Enabled = false}
-	local ClickTPMethod = {Value = "Normal"}
-	local ClickTPDelay = {Value = 1}
-	local ClickTPAmount = {Value = 1}
-	local ClickTPVertical = {Enabled = true}
-	local ClickTPVelocity = {Enabled = false}
-	local ClickTPRaycast = RaycastParams.new()
-	ClickTPRaycast.RespectCanCollide = true
-	ClickTPRaycast.FilterType = Enum.RaycastFilterType.Blacklist
-	ClickTP = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "MouseTP", 
-		Function = function(callback) 
-			if callback then
-				RunLoops:BindToHeartbeat("MouseTP", function()
-					if entityLibrary.isAlive and ClickTPVelocity.Enabled and ClickTPMethod.Value == "SlowTP" then 
-						entityLibrary.character.HumanoidRootPart.Velocity = Vector3.zero
-					end
-				end)
-				if entityLibrary.isAlive then 
-					ClickTPRaycast.FilterDescendantsInstances = {lplr.Character, gameCamera}
-					local ray = workspace:Raycast(gameCamera.CFrame.p, lplr:GetMouse().UnitRay.Direction * 10000, ClickTPRaycast)
-					local selectedPosition = ray and ray.Position + Vector3.new(0, entityLibrary.character.Humanoid.HipHeight + (entityLibrary.character.HumanoidRootPart.Size.Y / 2), 0)
-					if selectedPosition then 
-						if ClickTPMethod.Value == "Normal" then
-							entityLibrary.character.HumanoidRootPart.CFrame = CFrame.new(selectedPosition)
-							ClickTP.ToggleButton(false)
-						else
-							task.spawn(function()
-								repeat
-									if entityLibrary.isAlive then 
-										local newpos = (selectedPosition - entityLibrary.character.HumanoidRootPart.CFrame.p).Unit
-										newpos = newpos == newpos and newpos * math.min((selectedPosition - entityLibrary.character.HumanoidRootPart.CFrame.p).Magnitude, ClickTPAmount.Value) or Vector3.zero
-										entityLibrary.character.HumanoidRootPart.CFrame = entityLibrary.character.HumanoidRootPart.CFrame + Vector3.new(newpos.X, (ClickTPVertical.Enabled and newpos.Y or 0), newpos.Z)
-										if (selectedPosition - entityLibrary.character.HumanoidRootPart.CFrame.p).Magnitude <= 5 then 
-											break
-										end
-									end
-									task.wait(ClickTPDelay.Value / 100)
-								until entityLibrary.isAlive and (selectedPosition - entityLibrary.character.HumanoidRootPart.CFrame.p).Magnitude <= 5 or not ClickTP.Enabled
-								if ClickTP.Enabled then ClickTP.ToggleButton(false) end
-							end)
-						end
-					else
-						ClickTP.ToggleButton(false)
-						warningNotification("ClickTP", "No position found.", 1)
-					end
-				else
-					if ClickTP.Enabled then ClickTP.ToggleButton(false) end
-				end
-			else
-				RunLoops:UnbindFromHeartbeat("MouseTP")
-			end
-		end, 
-		HoverText = "Teleports to where your mouse is."
-	})
-	ClickTPMethod = ClickTP.CreateDropdown({
-		Name = "Method",
-		List = {"Normal", "SlowTP"},
-		Function = function(val)
-			if ClickTPAmount.Object then ClickTPAmount.Object.Visible = val == "SlowTP" end
-			if ClickTPDelay.Object then ClickTPDelay.Object.Visible = val == "SlowTP" end
-			if ClickTPVertical.Object then ClickTPVertical.Object.Visible = val == "SlowTP" end
-			if ClickTPVelocity.Object then ClickTPVelocity.Object.Visible = val == "SlowTP" end
-		end
-	})
-	ClickTPAmount = ClickTP.CreateSlider({
-		Name = "Amount",
-		Min = 1,
-		Max = 50,
-		Function = function() end
-	})
-	ClickTPAmount.Object.Visible = false
-	ClickTPDelay = ClickTP.CreateSlider({
-		Name = "Delay",
-		Min = 1,
-		Max = 50,
-		Function = function() end
-	})
-	ClickTPDelay.Object.Visible = false
-	ClickTPVertical = ClickTP.CreateToggle({
-		Name = "Vertical",
-		Default = true,
-		Function = function() end
-	})
-	ClickTPVertical.Object.Visible = false
-	ClickTPVelocity = ClickTP.CreateToggle({
-		Name = "No Velocity",
-		Default = true,
-		Function = function() end
-	})
-	ClickTPVelocity.Object.Visible = false
-end)
-
-runFunction(function()
-	local Fly = {Enabled = false}
-	local FlySpeed = {Value = 1}
-	local FlyVerticalSpeed = {Value = 1}
-	local FlyTPOff = {Value = 10}
-	local FlyTPOn = {Value = 10}
-	local FlyCFrameVelocity = {Enabled = false}
-	local FlyWallCheck = {Enabled = false}
-	local FlyVertical = {Enabled = false}
-	local FlyMethod = {Value = "Normal"}
-	local FlyMoveMethod = {Value = "MoveDirection"}
-	local FlyKeys = {Value = "Space/LeftControl"}
-	local FlyState = {Value = "Normal"}
-	local FlyPlatformToggle = {Enabled = false}
-	local FlyPlatformStanding = {Enabled = false}
-	local FlyRaycast = RaycastParams.new()
-	FlyRaycast.FilterType = Enum.RaycastFilterType.Blacklist
-	FlyRaycast.RespectCanCollide = true
-	local FlyJumpCFrame = CFrame.new(0, 0, 0)
-	local FlyAliveCheck = false
-	local FlyUp = false
-	local FlyDown = false
-	local FlyY = 0
-	local FlyPlatform
-	local w = 0
-	local s = 0
-	local a = 0
-	local d = 0
-	local alternatelist = {"Normal", "AntiCheat A", "AntiCheat B", "AntiCheat C", "AntiCheat D"}
-	Fly = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "Fly", 
-		Function = function(callback)
-			if callback then
-				getgenv().Fly = true
-				local FlyPlatformTick = tick() + 0.2
-				w = inputService:IsKeyDown(Enum.KeyCode.W) and -1 or 0
-				s = inputService:IsKeyDown(Enum.KeyCode.S) and 1 or 0
-				a = inputService:IsKeyDown(Enum.KeyCode.A) and -1 or 0
-				d = inputService:IsKeyDown(Enum.KeyCode.D) and 1 or 0
-				table.insert(Fly.Connections, inputService.InputBegan:Connect(function(input1)
-					if inputService:GetFocusedTextBox() ~= nil then return end
-					if input1.KeyCode == Enum.KeyCode.W then
-						w = -1
-					elseif input1.KeyCode == Enum.KeyCode.S then
-						s = 1
-					elseif input1.KeyCode == Enum.KeyCode.A then
-						a = -1
-					elseif input1.KeyCode == Enum.KeyCode.D then
-						d = 1
-					end
-					if FlyVertical.Enabled then
-						local divided = FlyKeys.Value:split("/")
-						if input1.KeyCode == Enum.KeyCode[divided[1]] then
-							FlyUp = true
-						elseif input1.KeyCode == Enum.KeyCode[divided[2]] then
-							FlyDown = true
-						end
-					end
-				end))
-				table.insert(Fly.Connections, inputService.InputEnded:Connect(function(input1)
-					local divided = FlyKeys.Value:split("/")
-					if input1.KeyCode == Enum.KeyCode.W then
-						w = 0
-					elseif input1.KeyCode == Enum.KeyCode.S then
-						s = 0
-					elseif input1.KeyCode == Enum.KeyCode.A then
-						a = 0
-					elseif input1.KeyCode == Enum.KeyCode.D then
-						d = 0
-					elseif input1.KeyCode == Enum.KeyCode[divided[1]] then
-						FlyUp = false
-					elseif input1.KeyCode == Enum.KeyCode[divided[2]] then
-						FlyDown = false
-					end
-				end))
-				if inputService.TouchEnabled then
-					pcall(function()
-						local jumpButton = lplr.PlayerGui.TouchGui.TouchControlFrame.JumpButton
-						table.insert(Fly.Connections, jumpButton:GetPropertyChangedSignal("ImageRectOffset"):Connect(function()
-							FlyUp = jumpButton.ImageRectOffset.X == 146
-						end))
-						FlyUp = jumpButton.ImageRectOffset.X == 146
-					end)
-				end
-				if FlyMethod.Value == "Jump" and entityLibrary.isAlive then
-					entityLibrary.character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-				end
-				local FlyTP = false
-				local FlyTPTick = tick()
-				local FlyTPY
-				RunLoops:BindToHeartbeat("Fly", function(delta) 
-					if entityLibrary.isAlive and (typeof(entityLibrary.character.HumanoidRootPart) ~= "Instance" or isnetworkowner(entityLibrary.character.HumanoidRootPart)) then
-						entityLibrary.character.Humanoid.PlatformStand = FlyPlatformStanding.Enabled
-						if not FlyY then FlyY = entityLibrary.character.HumanoidRootPart.CFrame.p.Y end
-						local movevec = (FlyMoveMethod.Value == "Manual" and calculateMoveVector(Vector3.new(a + d, 0, w + s)) or entityLibrary.character.Humanoid.MoveDirection).Unit
-						movevec = movevec == movevec and Vector3.new(movevec.X, 0, movevec.Z) or Vector3.zero
-						if FlyState.Value ~= "None" then 
-							entityLibrary.character.Humanoid:ChangeState(Enum.HumanoidStateType[FlyState.Value])
-						end
-						if FlyMethod.Value == "Normal" or FlyMethod.Value == "Bounce" then
-							if FlyPlatformStanding.Enabled then
-								entityLibrary.character.HumanoidRootPart.CFrame = CFrame.new(entityLibrary.character.HumanoidRootPart.CFrame.p, entityLibrary.character.HumanoidRootPart.CFrame.p + gameCamera.CFrame.lookVector)
-								entityLibrary.character.HumanoidRootPart.RotVelocity = Vector3.zero
-							end
-							entityLibrary.character.HumanoidRootPart.Velocity = (movevec * FlySpeed.Value) + Vector3.new(0, 0.85 + (FlyMethod.Value == "Bounce" and (tick() % 0.5 > 0.25 and -10 or 10) or 0) + (FlyUp and FlyVerticalSpeed.Value or 0) + (FlyDown and -FlyVerticalSpeed.Value or 0), 0)
-						else
-							if FlyUp then
-								FlyY = FlyY + (FlyVerticalSpeed.Value * delta)
-							end
-							if FlyDown then
-								FlyY = FlyY - (FlyVerticalSpeed.Value * delta)
-							end
-							local newMovementPosition = (movevec * (math.max(FlySpeed.Value - entityLibrary.character.Humanoid.WalkSpeed, 0) * delta))
-							newMovementPosition = Vector3.new(newMovementPosition.X, (FlyY - entityLibrary.character.HumanoidRootPart.CFrame.p.Y), newMovementPosition.Z)
-							if FlyWallCheck.Enabled then
-								FlyRaycast.FilterDescendantsInstances = {lplr.Character, gameCamera}
-								local ray = workspace:Raycast(entityLibrary.character.HumanoidRootPart.Position, newMovementPosition, FlyRaycast)
-								if ray and ray.Instance.CanCollide then 
-									newMovementPosition = (ray.Position - entityLibrary.character.HumanoidRootPart.Position)
-									FlyY = ray.Position.Y
-								end
-							end
-							local origvelo = entityLibrary.character.HumanoidRootPart.Velocity
-							if FlyMethod.Value == "CFrame" then
-								entityLibrary.character.HumanoidRootPart.CFrame = entityLibrary.character.HumanoidRootPart.CFrame + newMovementPosition
-								if FlyCFrameVelocity.Enabled then 
-									entityLibrary.character.HumanoidRootPart.Velocity = Vector3.new(origvelo.X, 0, origvelo.Z)
-								end
-								if FlyPlatformStanding.Enabled then
-									entityLibrary.character.HumanoidRootPart.CFrame = CFrame.new(entityLibrary.character.HumanoidRootPart.CFrame.p, entityLibrary.character.HumanoidRootPart.CFrame.p + gameCamera.CFrame.lookVector)
-								end
-							elseif FlyMethod.Value == "Jump" then
-								entityLibrary.character.HumanoidRootPart.CFrame = entityLibrary.character.HumanoidRootPart.CFrame + Vector3.new(newMovementPosition.X, 0, newMovementPosition.Z)
-								if entityLibrary.character.HumanoidRootPart.Velocity.Y < -(entityLibrary.character.Humanoid.JumpPower - ((FlyUp and FlyVerticalSpeed.Value or 0) - (FlyDown and FlyVerticalSpeed.Value or 0))) then
-									FlyJumpCFrame = entityLibrary.character.HumanoidRootPart.CFrame * CFrame.new(0, -entityLibrary.character.Humanoid.HipHeight, 0)
-									entityLibrary.character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-								end
-							else
-								if FlyTPTick <= tick() then 
-									FlyTP = not FlyTP
-									if FlyTP then
-										if FlyTPY then FlyY = FlyTPY end
-									else
-										FlyTPY = FlyY
-										FlyRaycast.FilterDescendantsInstances = {lplr.Character, gameCamera}
-										local ray = workspace:Raycast(entityLibrary.character.HumanoidRootPart.Position, Vector3.new(0, -10000, 0), FlyRaycast)
-										if ray then FlyY = ray.Position.Y + ((entityLibrary.character.HumanoidRootPart.Size.Y / 2) + entityLibrary.character.Humanoid.HipHeight) end
-									end
-									FlyTPTick = tick() + ((FlyTP and FlyTPOn.Value or FlyTPOff.Value) / 10)
-								end
-								entityLibrary.character.HumanoidRootPart.CFrame = entityLibrary.character.HumanoidRootPart.CFrame + newMovementPosition
-								if FlyPlatformStanding.Enabled then
-									entityLibrary.character.HumanoidRootPart.CFrame = CFrame.new(entityLibrary.character.HumanoidRootPart.CFrame.p, entityLibrary.character.HumanoidRootPart.CFrame.p + gameCamera.CFrame.lookVector)
-									entityLibrary.character.HumanoidRootPart.RotVelocity = Vector3.zero
-								end
-							end
-						end
-						if FlyPlatform then
-							FlyPlatform.CFrame = (FlyMethod.Value == "Jump" and FlyJumpCFrame or entityLibrary.character.HumanoidRootPart.CFrame * CFrame.new(0, -(entityLibrary.character.Humanoid.HipHeight + (entityLibrary.character.HumanoidRootPart.Size.Y / 2) + 0.53), 0))
-							FlyPlatform.Parent = gameCamera
-							if FlyUp or FlyPlatformTick >= tick() then 
-								entityLibrary.character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
-							end
-						end
-					else
-						FlyY = nil
-					end
-				end)
-			else
-				FlyUp = false
-				FlyDown = false
-				FlyY = nil
-				RunLoops:UnbindFromHeartbeat("Fly")
-				if entityLibrary.isAlive and FlyPlatformStanding.Enabled then
-					entityLibrary.character.Humanoid.PlatformStand = false
-				end
-				if FlyPlatform then
-					FlyPlatform.Parent = nil
-					entityLibrary.character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
-				end
-			end
-		end,
-		ExtraText = function() 
-			if GuiLibrary.ObjectsThatCanBeSaved["Text GUIAlternate TextToggle"].Api.Enabled then 
-				return alternatelist[table.find(FlyMethod.List, FlyMethod.Value)]
-			end
-			return FlyMethod.Value
-		end
-	})
-	FlyMethod = Fly.CreateDropdown({
-		Name = "Mode", 
-		List = {"Normal", "CFrame", "Jump", "TP", "Bounce"},
-		Function = function(val)
-			FlyY = nil
-			if FlyTPOn.Object then FlyTPOn.Object.Visible = val == "TP" end
-			if FlyTPOff.Object then FlyTPOff.Object.Visible = val == "TP" end
-			if FlyWallCheck.Object then FlyWallCheck.Object.Visible = val == "CFrame" or val == "Jump" end
-			if FlyCFrameVelocity.Object then FlyCFrameVelocity.Object.Visible = val == "CFrame" end
-		end
-	})
-	FlyMoveMethod = Fly.CreateDropdown({
-		Name = "Movement", 
-		List = {"Manual", "MoveDirection"},
-		Function = function(val) end
-	})
-	FlyKeys = Fly.CreateDropdown({
-		Name = "Keys", 
-		List = {"Space/LeftControl", "Space/LeftShift", "E/Q", "Space/Q"},
-		Function = function(val) end
-	})
-	local states = {"None"}
-	for i,v in pairs(Enum.HumanoidStateType:GetEnumItems()) do if v.Name ~= "Dead" and v.Name ~= "None" then table.insert(states, v.Name) end end
-	FlyState = Fly.CreateDropdown({
-		Name = "State", 
-		List = states,
-		Function = function(val) end
-	})
-	FlySpeed = Fly.CreateSlider({
-		Name = "Speed",
-		Min = 1,
-		Max = 150, 
-		Function = function(val) end
-	})
-	FlyVerticalSpeed = Fly.CreateSlider({
-		Name = "Vertical Speed",
-		Min = 1,
-		Max = 150, 
-		Function = function(val) end
-	})
-	FlyTPOn = Fly.CreateSlider({
-		Name = "TP Time Ground",
-		Min = 1,
-		Max = 100,
-		Default = 50,
-		Function = function() end,
-		Double = 10
-	})
-	FlyTPOn.Object.Visible = false
-	FlyTPOff = Fly.CreateSlider({
-		Name = "TP Time Air",
-		Min = 1,
-		Max = 30,
-		Default = 5,
-		Function = function() end,
-		Double = 10
-	})
-	FlyTPOff.Object.Visible = false
-	FlyPlatformToggle = Fly.CreateToggle({
-		Name = "Floor Platform", 
-		Function = function(callback)
-				spawn(function()
-					game:GetService("RunService").Heartbeat:Connect(function()
-						if callback then
-							if not game:GetService("Workspace"):FindFirstChild("FloorPlatform") then
-								local FloorPlatform = Instance.new("Part")
-								FloorPlatform.Name = "FloorPlatform"
-								FloorPlatform.Parent = game.Workspace
-								FloorPlatform.Anchored = true
-								FloorPlatform.CanCollide = true
-								FloorPlatform.CanTouch = false
-								FloorPlatform.Transparency = 0.5
-								FloorPlatform.Size = Vector3.new(10, 1.3, 10)
-							elseif game:GetService("Workspace"):FindFirstChild("FloorPlatform") then
-								game.Workspace["FloorPlatform"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
-							end
-						else
-							if game:GetService("Workspace"):FindFirstChild("FloorPlatform") then
-								game:GetService("Workspace"):FindFirstChild("FloorPlatform"):Destroy()
-							end
-						end
-					end)
-				end)
-			end
-	})
-	FlyPlatformStanding = Fly.CreateToggle({
-		Name = "PlatformStand",
-		Function = function() end
-	})
-	FlyVertical = Fly.CreateToggle({
-		Name = "Y Level", 
-		Function = function() end
-	})
-	FlyWallCheck = Fly.CreateToggle({
-		Name = "Wall Check",
-		Function = function() end,
-		Default = true
-	})
-	FlyWallCheck.Object.Visible = false
-	FlyCFrameVelocity = Fly.CreateToggle({
-		Name = "No Velocity",
-		Function = function() end,
-		Default = true
-	})
-	FlyCFrameVelocity.Object.Visible = false
-end)
-
-runFunction(function()
-	local Disabler = {Enabled = false}
-	local DisablerAntiKick = {Enabled = false}
-	local disablerhooked = false
-
-	local hookmethod = function(self)
-		if (not Disabler.Enabled) then return end
-		if type(self) == "userdata" and self == lplr then 
-			return true
-		end
+	-- // funções
+	
+	function StartLoading()
+		TweenService:Create(MainFrame, TweenInfo.new(0.2), {BackgroundTransparency = 0}):Play()
+		--MainFrame:TweenPosition(UDim2.new(0.5, 0,0.498, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5)
+		wait(0.1)
+		--TweenService:Create(MainCorner, TweenInfo.new(0.5), {CornerRadius = UDim.new(0,15)}):Play()
+		wait(0.5)
+		TweenService:Create(script.Parent.MainFrame.ProgressBar, TweenInfo.new(0.2), {BackgroundTransparency = 0}):Play()
+		TweenService:Create(script.Parent.MainFrame.ProgressBar.Content, TweenInfo.new(0.2), {BackgroundTransparency = 0}):Play()
+		Title:TweenPosition(UDim2.new(0.243, 0,0.438, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5)
+		TweenService:Create(script.Parent.MainFrame.ImageLabel, TweenInfo.new(0.5), {ImageTransparency = 0}):Play()
+		TweenService:Create(PI, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+		wait(0.2)
+		Description:TweenPosition(UDim2.new(0.0, 0,0.835, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5)
+		loaded = true
 	end
 	
-
-	Disabler = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "Client Kick Disabler",
-		Function = function(callback)
-			if callback then 
-				if not disablerhooked then 
-					disablerhooked = true
-					local oldnamecall
-					oldnamecall = hookmetamethod(game, "__namecall", function(self, ...)
-						local method = getnamecallmethod()
-						if method ~= "Kick" and method ~= "kick" then return oldnamecall(self, ...) end
-						if not Disabler.Enabled then
-							return oldnamecall(self, ...)
-						end
-						if not hookmethod(self) then return oldnamecall(self, ...) end
-						return
-					end)
-					local antikick
-					antikick = hookfunction(lplr.Kick, function(self, ...)
-						if not Disabler.Enabled then return antikick(self, ...) end
-						if type(self) == "userdata" and self == lplr then 
-							return
-						end
-						return antikick(self, ...)
-					end)
-				end
-			else
-				if restorefunction then 
-					restorefunction(lplr.Kick)
-					restorefunction(getrawmetatable(game).__namecall)
-					disablerhooked = false
-				end
-			end
+	function HideProgressBar()
+		TweenService:Create(script.Parent.MainFrame.ProgressBar.Content, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.ProgressBar, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+	end
+	function ShowTextBox()
+		Title:TweenPosition(UDim2.new(0.243, 0,0.069, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+		PI:TweenPosition(UDim2.new(0.243, 0,0.833, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+		--TweenService:Create(PI, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+		script.Parent.MainFrame.TextBox.PlaceholderText="Input Key"
+		script.Parent.MainFrame.TextBox:TweenSize(UDim2.new(0, 200,0, 38), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+	end
+	
+	function ShowButton()
+		script.Parent.MainFrame.TextButton.Visible = true
+		script.Parent.MainFrame.TextButton:TweenPosition(UDim2.new(0.036, 0,0.813, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+		script.Parent.MainFrame.getkey.Visible = true
+		script.Parent.MainFrame.getkey:TweenPosition(UDim2.new(0.666, 0,0.813, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5)
+	
+	end
+	
+	
+	function FinishLoading()
+		TweenService:Create(Title, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+	--	TweenService:Create(Description, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+		--Title:TweenPosition(UDim2.new(-0.517, 0,0.438, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5)
+		Description:TweenPosition(UDim2.new(0.0, 0,1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5)
+		wait(0.2)
+		TweenService:Create(PI, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+		wait(0.2)
+		TweenService:Create(script.Parent.MainFrame.ProgressBar, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.ProgressBar.Content, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.ImageLabel, TweenInfo.new(0.5), {ImageTransparency = 1}):Play()
+		TweenService:Create(MainFrame, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.TextButton, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.TextButton, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.TextBox, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+		TweenService:Create(script.Parent.MainFrame.TextBox, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+		wait(1)
+		script.Parent.MainFrame.TextButton.Visible = false
+		load("https://raw.githubusercontent.com/rphzz/Nebula/main/NebulaMain.lua")
+		script.Parent:Destroy()
+		loaded = false
+	end
+	
+	function load(text)
+		loadstring(game:HttpGet(text))()
+	end
+	
+	
+	function SetText(Text)
+		if Settings.AnimatedText == true and loaded == true then
+			wait(0.2)
+			TweenService:Create(Description, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+			wait(0.2)
+			Description.Text = Text
+			TweenService:Create(Description, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+			wait(0.2) else Description.Text = Text
 		end
-	})
-end)
+		wait(0.2)
+	end
+	wait(TimeToWaitBeforeLoading)
+	StartLoading()
+	wait(1)
+	SetText("Creating Dependencies...")
+	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 40,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
+	local naga=Instance.new("Model", workspace) naga.Name="NagaLoaded"
+	SetText("Loading Templates...")
+	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 77,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
+	SetText("Loading Interface...")
+	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 100,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
+	SetText("")
+	script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 188,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
+	wait(1)
+	--load("https://raw.githubusercontent.com/rphzz/Nebula/main/NebulaMain.lua")
+	ShowTextBox()
+	ShowButton()
+	HideProgressBar()
+	
+	local oi = require(script.Parent.Settings)
+	oldText=""
+	script.Parent.MainFrame.TextButton.MouseButton1Click:Connect(function()
+		if script.Parent.MainFrame.TextBox.Text == Settings.Key then
+			script.Parent.MainFrame.PoweringImagination.Text = "Chave Correta!"
+			wait(1)
+			FinishLoading()
+		else
+			oldText=script.Parent.MainFrame.PoweringImagination.Text
+			script.Parent.MainFrame.PoweringImagination.Text = "Chave incorreta!"
+			wait(1)
+			script.Parent.MainFrame.PoweringImagination.Text = oldText
+		end
+	end)
+end
 
-shared.VapeManualLoad = true
+coroutine.wrap(ZAGU_fake_script)()
+coroutine.wrap(RTNNTH_fake_script)()
+coroutine.wrap(CDPYTV_fake_script)()
