@@ -40,8 +40,8 @@ Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(43.00000123679638, 43.
 Converted["_MainFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_MainFrame"].BorderSizePixel = 0
 Converted["_MainFrame"].ClipsDescendants = true
-Converted["_MainFrame"].Position = UDim2.new(0, 770, 0, 397)
-Converted["_MainFrame"].Size = UDim2.new(0.250972748, 0, 0.281954885, 0)
+Converted["_MainFrame"].Position = UDim2.new(0.499351501, 0, 0.497493744, 0)
+Converted["_MainFrame"].Size = UDim2.new(0, 386, 0, 225)
 Converted["_MainFrame"].Name = "MainFrame"
 Converted["_MainFrame"].Parent = Converted["_KeySystem_Cheese"]
 
@@ -55,8 +55,8 @@ Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].BackgroundTransparency = 1
 Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Title"].BorderSizePixel = 0
-Converted["_Title"].Position = UDim2.new(0, 83, 0, 98)
-Converted["_Title"].Size = UDim2.new(0.568475485, 0, 0.12888889, 0)
+Converted["_Title"].Position = UDim2.new(0.214470297, 0, 0.435555547, 0)
+Converted["_Title"].Size = UDim2.new(0, 219, 0, 29)
 Converted["_Title"].Name = "Title"
 Converted["_Title"].Parent = Converted["_MainFrame"]
 
@@ -69,8 +69,8 @@ Converted["_Description"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Description"].BackgroundTransparency = 1
 Converted["_Description"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Description"].BorderSizePixel = 0
-Converted["_Description"].Position = UDim2.new(0, 0, 0, 187)
-Converted["_Description"].Size = UDim2.new(1.00000012, 0, 0.12888889, 0)
+Converted["_Description"].Position = UDim2.new(0, 0, 0.831111133, 0)
+Converted["_Description"].Size = UDim2.new(0, 386, 0, 29)
 Converted["_Description"].Name = "Description"
 Converted["_Description"].Parent = Converted["_MainFrame"]
 
@@ -83,8 +83,8 @@ Converted["_PoweringImagination"].BackgroundColor3 = Color3.fromRGB(255, 255, 25
 Converted["_PoweringImagination"].BackgroundTransparency = 1
 Converted["_PoweringImagination"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_PoweringImagination"].BorderSizePixel = 0
-Converted["_PoweringImagination"].Position = UDim2.new(0, 93, 0, 125)
-Converted["_PoweringImagination"].Size = UDim2.new(0.516795933, 0, 0.12888889, 0)
+Converted["_PoweringImagination"].Position = UDim2.new(0.240310103, 0, 0.555555582, 0)
+Converted["_PoweringImagination"].Size = UDim2.new(0, 199, 0, 29)
 Converted["_PoweringImagination"].Name = "PoweringImagination"
 Converted["_PoweringImagination"].Parent = Converted["_MainFrame"]
 
@@ -97,8 +97,8 @@ Converted["_Credits"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Credits"].BackgroundTransparency = 1
 Converted["_Credits"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Credits"].BorderSizePixel = 0
-Converted["_Credits"].Position = UDim2.new(0, 103, 0, 71)
-Converted["_Credits"].Size = UDim2.new(0.462532341, 0, 0.12888889, 0)
+Converted["_Credits"].Position = UDim2.new(0.266149879, 0, 0.315555543, 0)
+Converted["_Credits"].Size = UDim2.new(0, 178, 0, 29)
 Converted["_Credits"].Visible = false
 Converted["_Credits"].Name = "Credits"
 Converted["_Credits"].Parent = Converted["_MainFrame"]
@@ -110,7 +110,7 @@ Converted["_ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_ImageLabel"].BackgroundTransparency = 1
 Converted["_ImageLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ImageLabel"].BorderSizePixel = 0
-Converted["_ImageLabel"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ImageLabel"].Size = UDim2.new(0, 386, 0, 225)
 Converted["_ImageLabel"].Visible = false
 Converted["_ImageLabel"].ZIndex = 0
 Converted["_ImageLabel"].Parent = Converted["_MainFrame"]
@@ -123,8 +123,8 @@ Converted["_ProgressBar"].BackgroundColor3 = Color3.fromRGB(50.00000461935997, 5
 Converted["_ProgressBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ProgressBar"].BorderSizePixel = 0
 Converted["_ProgressBar"].ClipsDescendants = true
-Converted["_ProgressBar"].Position = UDim2.new(0, 98, 0, 168)
-Converted["_ProgressBar"].Size = UDim2.new(0.485788107, 0, 0.0799999982, 0)
+Converted["_ProgressBar"].Position = UDim2.new(0.253230006, 0, 0.74666667, 0)
+Converted["_ProgressBar"].Size = UDim2.new(0, 187, 0, 18)
 Converted["_ProgressBar"].Visible = false
 Converted["_ProgressBar"].Name = "ProgressBar"
 Converted["_ProgressBar"].Parent = Converted["_MainFrame"]
@@ -159,7 +159,7 @@ Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(36.00000165402889, 36.00
 Converted["_TextBox"].BackgroundTransparency = 0.44999998807907104
 Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextBox"].BorderSizePixel = 0
-Converted["_TextBox"].Position = UDim2.new(0, 192, 0, 113)
+Converted["_TextBox"].Position = UDim2.new(0.496124059, 0, 0.50222224, 0)
 Converted["_TextBox"].Parent = Converted["_MainFrame"]
 
 Converted["_UICorner"].CornerRadius = UDim.new(0, 7)
@@ -181,8 +181,8 @@ Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 4
 Converted["_TextButton"].BackgroundTransparency = 0.4000000059604645
 Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextButton"].BorderSizePixel = 0
-Converted["_TextButton"].Position = UDim2.new(0, 13, 0, 182)
-Converted["_TextButton"].Size = UDim2.new(0.330749363, 0, 0.146666661, 0)
+Converted["_TextButton"].Position = UDim2.new(0.0335917324, 0, 0.808888912, 0)
+Converted["_TextButton"].Size = UDim2.new(0, 127, 0, 33)
 Converted["_TextButton"].Visible = false
 Converted["_TextButton"].Parent = Converted["_MainFrame"]
 
@@ -205,8 +205,8 @@ Converted["_getkey"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.00
 Converted["_getkey"].BackgroundTransparency = 0.4000000059604645
 Converted["_getkey"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_getkey"].BorderSizePixel = 0
-Converted["_getkey"].Position = UDim2.new(0, 147, 0, 182)
-Converted["_getkey"].Size = UDim2.new(0.31782946, 0, 0.146666661, 0)
+Converted["_getkey"].Position = UDim2.new(0.379844993, 0, 0.808888912, 0)
+Converted["_getkey"].Size = UDim2.new(0, 122, 0, 33)
 Converted["_getkey"].Visible = false
 Converted["_getkey"].Name = "getkey"
 Converted["_getkey"].Parent = Converted["_MainFrame"]
@@ -214,33 +214,16 @@ Converted["_getkey"].Parent = Converted["_MainFrame"]
 Converted["_UICorner2"].CornerRadius = UDim.new(0, 7)
 Converted["_UICorner2"].Parent = Converted["_getkey"]
 
+-- Fake Module Scripts:
 
 local fake_module_scripts = {}
 
-do
-	
+do -- Fake Module: StarterGui.KeySystem_Cheese.Settings
     local script = Instance.new("ModuleScript")
     script.Name = "Settings"
     script.Parent = Converted["_KeySystem_Cheese"]
     local function module_script()
 		local Settings = {
-			
-			
-
-
-
-
-
-
-
-
-
-
-            -- CONFIGURAÇÕES - NÃO ALTERE NADA FORA DESTE PARÂMETRO
-
-
-
-
 			TitleText = "Script Do <b>Cheese</b>",-- O título do script
 			DescriptionText = "milhô escript do planeta terra", -- O texto embaixo do script
 			UIGradientEnabled = true, -- Se o efeito azulado aparece
@@ -251,23 +234,6 @@ do
 			GetKeyLink = "https://google.com",
 			
 			Key = "CHAVE1"  -- Sua chave
-			
-			
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		}
 		
 		return Settings
@@ -278,7 +244,7 @@ end
 
 -- Fake Local Scripts:
 
-local function MIAH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
+local function MEHEO_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -307,7 +273,7 @@ local function MIAH_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.Ma
 		end
 	end)
 end
-local function OUCHKZ_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
+local function NRRXN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.MainFrame.getkey.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_getkey"]
@@ -326,7 +292,7 @@ local function OUCHKZ_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 		setclipboard(tostring(oi.GetKeyLink))
 	end)
 end
-local function DEZSN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
+local function WTVKFP_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.LoaderManager
     local script = Instance.new("LocalScript")
     script.Name = "LoaderManager"
     script.Parent = Converted["_KeySystem_Cheese"]
@@ -503,6 +469,6 @@ local function DEZSN_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.L
 	end)
 end
 
-coroutine.wrap(MIAH_fake_script)()
-coroutine.wrap(OUCHKZ_fake_script)()
-coroutine.wrap(DEZSN_fake_script)()
+coroutine.wrap(MEHEO_fake_script)()
+coroutine.wrap(NRRXN_fake_script)()
+coroutine.wrap(WTVKFP_fake_script)()
