@@ -237,7 +237,7 @@ do
 			
 			
 			
-			TitleText = "Script Do <b>REI GLOP</b>",-- O título do script
+			TitleText = "Script Do <b>Cheese</b>",-- O título do script
 			DescriptionText = "Melhor hub troll EB", -- O texto embaixo do script
 			UIGradientEnabled = true, -- Se o efeito azulado aparece
 			ProgressBarEnabled = true, -- Se a barra de progresso aparece
