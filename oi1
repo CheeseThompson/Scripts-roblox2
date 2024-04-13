@@ -282,7 +282,7 @@ local function VNKLIA_fake_script() -- Fake Script: StarterGui.KeySystem_Cheese.
 	oldText=""
 	script.Parent.MouseButton1Click:Connect(function()
 		if script.Parent.Parent.TextBox.Text == oi.Key then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/GlopGlopLinduh/GOku-presente-/main/K"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GlopGlopLinduh/JpBostola/main/Script%20pro%20EB%20do%20JpBosta"))()
 			oldText=script.Parent.Parent.PoweringImagination.Text
 			script.Parent.Parent.PoweringImagination.Text = "Chave Correta!"
 			wait(1)
